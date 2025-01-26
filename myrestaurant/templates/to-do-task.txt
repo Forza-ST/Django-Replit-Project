@@ -1,0 +1,2 @@
+Create a login modal when Admin link is clicked. 
+Then it redirects to the add_dish.html page

@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forza's Haute Cuisine Restaurant, Washington, DC</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a23; /* Very dark navy blue */
+            color: #c7f9cc; /* Faded lime yellow */
+        }
+        .header-text {
+            text-align: center;
+            padding: 20px;
+        }
+        .header-text h1 {
+            color: white; /* White font for the welcome text */
+        }
+        .header-text h2 {
+            color: #8b0000; /* Very dark red for Washington, DC */
+        }
+        .hero {
+            background: url("{% static 'images/MainLobby.jpg' %}") no-repeat center center;
+            background-size: cover;
+            height: 75vh;
+            color: #c7f9cc; /* Faded lime yellow */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        .navbar-nav .nav-item .nav-link {
+            color: #c7f9cc !important; /* Faded lime yellow */
+        }
+        .footer {
+            background: #343a40;
+            color: #c7f9cc;
+            padding: 20px 0;
+        }
+        .list-group-item {
+            background-color: #1a1a40; /* Slightly lighter than the body background */
+            color: #c7f9cc;
+        }
+        .reservation-form {
+            background-color: #1a1a40; /* Slightly lighter than the body background */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            color: #8b0000; /* Very dark red for the form font */
+        }
+        .reservation-form h3 {
+            color: #c7f9cc; /* Faded lime yellow */
+        }
+        .google-map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+            text-align: center; /* Center the map */
+        }
+        .google-map iframe {
+            display: inline-block;
+        }
+        .reservation-form .form-control,
+        .reservation-form .btn {
+            background-color: #0a0a23; /* Match the body background */
+            border-color: #8b0000; /* Very dark red for the form elements border */
+            color: #c7f9cc; /* Faded lime yellow for the form elements text */
+        }
+    </style>
+</head>
+<body>
+{% include 'navbar.html' %}
+<div class="mycontent">
+    
+</div>
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
+
+<footer class="footer text-center">
+    <div class="container">
+        <p>&copy; 2024 Forza's Haute Cuisine Restaurant, Washington, DC. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
