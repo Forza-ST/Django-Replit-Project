@@ -35,7 +35,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="loginForm" method="post">
+                <form id="loginForm" method="post" action="{% url 'new_login' %}">
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="username">Username</label>
@@ -45,9 +45,9 @@
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Login"\>
-                    
+                    <input type="submit" class="btn btn-primary" value="Login">
                 </form>
+                
             </div>
         </div>
     </div>
