@@ -48,11 +48,11 @@ def new_login(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('home')  # Redirect to a home page or dashboard
+                return redirect('add_dish')  # Redirect to a home page or dashboard
     else:
         form = CustomAuthenticationForm()
     
-    return redirect('add_dish.html', {'form': form})
+    return render(request, 'index.html', {'form': form})
 
 def register_user(request):
     if request.method == 'POST':
