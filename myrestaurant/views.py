@@ -20,10 +20,7 @@ def index(request):
 
 # @login_required
 def add_dish(request):
-    appetizers = Menu.objects.filter(category='Appetizers')
-    main_courses = Menu.objects.filter(category='Main Courses')
-    desserts = Menu.objects.filter(category='Desserts')
-
+    data = Menu.objects.all()
     if request.method == "POST":
         n = request.POST.get('name')
         d = request.POST.get('description')
@@ -33,11 +30,9 @@ def add_dish(request):
             menu = Menu(name=n, description=d, price=p, category=c)
             menu.save()
     
-    return render(request, 'add_dish.html', {
-        "appetizers": appetizers,
-        "main_courses": main_courses,
-        "desserts": desserts
-    })
+    return render(request, 'add_dish.html', {'data': data})
+       
+
 
 def new_login(request):
     if request.method == 'POST':
